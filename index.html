@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<style>
+	
+	html, body {
+		margin: 0;
+		padding: 0;
+	}
+
+	.tw-elections-map {
+		width: 100%;
+		/* This is a default size, this property will
+		   change when the iframe sends it's size */
+		height: 800px;
+	}
+</style>
+
+<body>
+
+	<iframe class="tw-elections-map" src="https://staging-1443773096025-k4j6kxu3t7-dot-toaster-twe-staging.appspot.com/embedded-map/" scrolling="false" frameborder="0">Your browser does not support iframes</iframe>
+
+</body>
+
+<script>
+
+(function() {
+	window.onload = initiate;
+
+	function initiate() {
+		var iframe = document.querySelector('.tw-elections-map');
+		var frameOrigin = 'https://staging-1443773096025-k4j6kxu3t7-dot-toaster-twe-staging.appspot.com';
+
+		window.addEventListener('message', function(e) {
+			if (e.origin === frameOrigin) {
+				iframe.style.height = e.data + 'px';
+			}
+		}, false);
+
+		iframe.contentWindow.postMessage('page-ready', frameOrigin);
+	}
+})();
+
+
+</script>
+
+</html>
