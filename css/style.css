@@ -1,0 +1,192 @@
+@charset "utf-8";
+@import url("reset.css");
+/* CSS Document */
+body { 
+    color: #393939;
+     background: #ebf9fa;
+}
+#navigation {
+    width: 100%;
+    background: rgba(10,10,10,.8);
+    font-family: "Helvetica Neue","Heiti TC","å¾®è»Ÿæ­£é»‘é«”","Microsoft JhengHei","Arial",sans-serif;
+}
+.nav {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.nav_LOGO {
+    height: 40px;
+	min-width:110px;
+}
+.nav_right {
+    float: right;
+}
+.nav_item {
+    height: 40px;
+    padding: 10px;
+}
+.nav_item:hover, .nav_item_active {
+    background: rgba(255,255,255,.2);
+}
+.nav_item_text {
+	line-height:40px;
+}
+#sidebar-container {
+    height: auto;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 60px;
+    background: rgba(230,230,230,1);
+    z-index: 400;
+	display:none;
+}
+.tri {
+	display:block;
+	color:rgba(230,230,230,1);
+	position:absolute;
+	top:-20px;
+	right:18px;
+}
+.nav_item_sidebar {
+    display: block;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 15px 15px 15px 20px;
+    color: #353935;
+    cursor: pointer;
+    font-family: "Helvetica Neue","Heiti TC","微軟正黑體","Microsoft JhengHei","Arial",sans-serif;
+}
+.nav_item_sidebar:hover {
+	background:#b6b6b6;
+}
+.mobi {
+    display: none;
+}
+.mobi_nav {
+    min-height: 53px;
+}
+.mobi_nav_item {
+    position: absolute;
+    padding: 15px 10px 10px;
+    right: 5px;
+    top: 0;
+    height: 45px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.mobi_nav_item, .nav_item {
+    color: #fff;
+    display: inline-block;
+    cursor: pointer;
+    font-family: "Helvetica Neue",Helvetica,Arial,"Heiti TC","Apple LiGothic Medium","\5FAE\8EDF\6B63\9ED1\9AD4",sans-serif;
+    vertical-align: top;
+}
+.image_slider {
+    margin-top: 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    padding: 8px;
+    box-sizing: border-box;
+	width: 1000px;
+}
+.page_wrapper {
+    background: #ebf9fa;
+}
+.index_block_section_wrapper {
+    font-family: "Helvetica Neue",Helvetica,Arial,"Heiti TC","Apple LiGothic Medium","微軟正黑體",sans-serif;
+}
+.index_block_section {
+    text-align: center;
+}
+.index_block {
+    min-height: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    vertical-align: top;
+    width: 30%;
+    display: inline-block;
+}
+.index_block h3 {
+    font-size: 24px;
+    font-weight: 600;
+    padding-right: 20px;
+    margin-bottom: 5px;
+}
+.index_block h3 .icon {
+	color:#808080;
+	margin-right:10px;
+}
+.index_block h3 .icon.comments:before {
+	content:"\f0e6";
+}
+.index_block p {
+    text-align: left;
+    margin-top: 10px;
+	line-height:1.5em;
+}
+
+
+
+/*=================================平版+手機=======================================*/
+/* 平板版型 */ 
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+.wrapper {
+	width:auto;
+}
+.index_block {
+    width:100%;
+}
+/*.mobi {
+    display: inline-block;
+}
+.nav_right {
+	display:none;
+}*/
+}
+
+/* 手機版型 */ 
+@media screen and (max-width: 599px) {
+.wrapper {
+	width:auto;
+}
+.index_block {
+    width:100%;
+    display: block;
+    text-align: left;
+}
+.nav_LOGO {
+    height: 35px;
+	min-width:90px;
+}
+/*.mobi {
+    display: inline-block;
+}
+.nav_right {
+	display:none;
+}	*/
+}
+
+
+/*================================其他CSS範本=====================================*/
+/*----css 清除浮動技巧------*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+/*-------css 清除浮動技巧----*/
+
+/*微軟正黑體下法  font-family:\5FAE\8EDF\6B63\9ED1\9AD4,Microsoft JhengHei,MingLiU,sans-serif;  */

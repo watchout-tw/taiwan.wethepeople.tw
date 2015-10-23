@@ -1,16 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-	<title></title>
-</head>
+<!-- viewport -->
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta charset="utf-8">
+<title>總統，給問嗎?</title>
+<!-- 網頁圖標
+<link rel="shortcut icon" href="anytimefortaiwan.ico">
+-->
+
+<!-- 解決IE7~8看不懂html5的標籤 -->
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
+</script>
+<![endif]-->
+
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
 <style>
 	
-	html, body {
-		margin: 0;
-		padding: 0;
-	}
-
 	.tw-elections-map {
 		width: 100%;
 		/* This is a default size, this property will
@@ -19,9 +28,67 @@
 	}
 </style>
 
-<body>
+</head>
 
-	<iframe class="tw-elections-map" src="https://staging-1443773096025-k4j6kxu3t7-dot-toaster-twe-staging.appspot.com/embedded-map/" scrolling="false" frameborder="0">Your browser does not support iframes</iframe>
+<body>
+<!---NAV--->
+<div id="navigation">
+  <div class="nav">
+    <div class="mobi">
+      <div class="mobi_nav">
+        <div class="tri-up-nav"></div>
+        <div class="mobi_nav_item"><i class="fa fa-bars fa-2x"></i></div>
+      </div>
+    </div>
+    <div class="nav_item" style="min-width:110px; float:left; margin-right:2%;"><a href="http://watchout.tw/" target="_blank"><img class="nav_LOGO" src="images/navbar_logo2.png"></a></div>
+    <div class="nav_item" style="min-width:110px;"><img class="nav_LOGO" src="images/navbar_logo.png"></div>
+    <div class="nav_right">
+      <a href="https://www.facebook.com/wethepeople.ask.2016?fref=ts" target="_blank"><div class="nav_item nav_item_text"><i class="fa fa-facebook-square fa-2x icon" style="padding-top:5px;"></i></div></a><!--
+      <div class="nav_item nav_item_text">登入</div>
+      <div class="nav_item nav_item_text">註冊</div>
+      <div class="nav_item nav_item_text">登出</div>-->
+    </div>
+  </div>
+</div>
+
+<!--手機版下拉選單-->
+<!--<div id="sidebar-container">
+    <i class="fa fa-caret-up fa-2x tri"></i>
+    <a class="nav_item_sidebar">登入</a>
+    <a class="nav_item_sidebar">註冊</a>
+    <a class="nav_item_sidebar">登出</a>
+</div>-->
+
+<!--上方大banner-->
+<div class="page_wrapper">
+  <div class="image_slider">
+      <img ng-src="images/cover.jpg" width="100%;" src="images/cover.jpg" class="ipushsRightTarget">
+  </div>
+</div>
+
+<!--三說明區塊-->
+<div class="page_wrapper index_block_section_wrapper">
+<div class="wrapper">
+   <div class="index_block_section">
+        <div class="index_block">
+         <h3 class="ipushsRightTarget"><i class="fa comments icon"></i>雙向</h3>
+         <p>候選人可以獲得選民意見，選民可得知候選人回答，「市長，給問嗎」是候選人和選民的<b>雙向溝通</b>平台。</p>
+        </div>
+
+        <div class="index_block">
+         <h3><i class="fa fa-rocket icon"></i>即時</h3>
+         <p>你可以在<b>任何時候</b>丟出自己關注的議題，自己掌握自己拋出問題的時間點。你無須擔心錯過任何截止時間。</p>
+        </div>
+
+        <div class="index_block">
+         <h3><i class="fa fa-male icon"></i>平等</h3>
+         <p>每個人都有一樣的發言權，透過連署機制，<b>真實說出市民心聲</b>的人將成為市民代表。</p>
+        </div>
+   </div>
+</div>
+</div>
+
+<iframe class="tw-elections-map" src="https://elections.withgoogle.com/taiwan2016/embedded-map/" scrolling="false" frameborder="0">Your browser does not support iframes</iframe>
 
 </body>
 
@@ -32,7 +99,7 @@
 
 	function initiate() {
 		var iframe = document.querySelector('.tw-elections-map');
-		var frameOrigin = 'https://staging-1443773096025-k4j6kxu3t7-dot-toaster-twe-staging.appspot.com';
+		var frameOrigin = 'https://elections.withgoogle.com';
 
 		window.addEventListener('message', function(e) {
 			if (e.origin === frameOrigin) {
