@@ -16,7 +16,6 @@ body {
 }
 .nav_LOGO {
     height: 40px;
-	min-width:110px;
 }
 .nav_right {
     float: right;
@@ -27,6 +26,10 @@ body {
 }
 .nav_item:hover, .nav_item_active {
     background: rgba(255,255,255,.2);
+}
+.nav_item2 {
+    height: 40px;
+    padding: 10px;
 }
 .nav_item_text {
 	line-height:40px;
